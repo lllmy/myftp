@@ -1,0 +1,121 @@
+1、8<<2等于？
+
+2、通过内置函数计算5除以2的余数 
+
+3、s=[1,"h",2,"e",[1,2,3],"l",(4,5),"l",{1:"111"},"o"],将s中的5个字符提取出来并拼接成字符串。
+
+4、判断"yuan"是否在[123,(1,"yuan"),{"yuan":"handsome"},"yuanhao"],如何判断以及对应结果？
+
+5、l=[1,2,3]
+   l2=l.insert(3,"hello")
+   print(l2)
+   执行结果并解释为什么？
+
+6、 a=[1,2,[3,"hello"],{"egon":"aigan"}]
+	b=a[:]
+
+	a[0]=5
+	a[2][0]=666
+
+	print(a)
+	print(b)
+    #计算结果以及为什么？
+
+ 7  使用文件读取，找出文件中最长的行的长度（用一行代码解决）？
+
+ 8  def add(s, x):
+	   return s + x
+	 
+	def generator():
+	   for i in range(4):
+	       yield i
+	 
+	base = generator()
+	for n in [1, 11]:
+	   base = (add(i, n) for i in base)
+	 
+	print list(base)
+
+9
+   hello.py (utf8方式保存)：
+   ＃coding：utf8
+   print(“老男孩”)
+
+   如果用py2，py3下在cmd下运行回报错吗？为什么？（编码）
+
+10 通过函数化编程实现5的阶乘
+11 打印如下图案：
+          
+           ＊
+          *＊*
+         **＊**
+        ****＊**
+         **＊**
+          *＊*
+           *
+
+12
+		def outer():
+	        count = 10
+	        def inner():
+	            count = 20
+	            print(count)
+	        inner()
+	        print(count)
+        outer()
+
+        （1）分析运行结果？
+        （2）如何让两个打印都是20
+
+13 输入一个年份，判断是否是闰年？
+
+14 任意输入三个数，判断大小？(if...else...)
+
+15 求s=a+aa+aaa+aaaa+aa...a的值，其中a是一个数字。例如2+22+222+2222+22222
+   ，几个数相加以及a的值由键盘控制。
+
+16  f=open("a")
+
+	while 1:
+	    choice=input("是否显示:[Y/N]:")
+	    if choice.upper()=="Y":
+	        for i in f:
+	            print(i)
+	        f.seek(0)
+	    else:
+	        break
+	f.colse()
+
+	请问程序有无bug，怎么解决？
+    没有close？seek(0)
+
+17
+	def foo():
+	    print('hello foo')
+        return()
+	def bar():
+        print('hello bar')
+
+
+    （1）为这些基础函数加一个装饰器，执行对应函数内容后，将当前时间写入一个文件做一个日志记录。
+    （2）改成参数装饰器，即可以根据调用时传的参数决定是否记录时间，比如@logger(True)
+    def f():
+        logger(flog):
+            def inner()
+            return inner
+        return logger
+
+18 三次登陆锁定：要求一个用户名密码输入密码错误次数超过三次锁定？
+
+19 写一个程序，打印数字1到100，3的倍数打印“Fizz”来替换这个数，5的倍数打印“Buzz”，
+   对于既是3的倍数又是5的倍数的数字打印“FizzBuzz”（一行代码？）
+    for i in range(1,101):
+      print("Fizz"[i%3*6::]+"Buzz"[i%5*4::]or i)
+    或：
+    print(["Fizz"[i%3*4::]+"Buzz"[i%5*4::]or i for i in range(1,101)])
+
+20 求[[],[],[],[]]一个列表内所有子列表的交集——reduce
+
+21 and or组合操作
+
+22 set集合操作
